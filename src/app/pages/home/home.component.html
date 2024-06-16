@@ -1,0 +1,15 @@
+<form [formGroup]="form">
+  <div>
+    <cva-input formControlName='name' [placeholder]="'Name'" [type]="'text'"/>
+    <cva-error-msg [form]="form" [list]="validations.name" [type]="'name'"/>
+  </div>
+  <div>
+    <cva-input formControlName='email' [placeholder]="'Email'" [type]="'email'"/>
+    <cva-error-msg [form]="form" [list]="validations.email" [type]="'email'"/>
+  </div>
+  <div>
+    <cva-input formControlName='age' [placeholder]="'Age'" [type]="'number'"/>
+    <cva-error-msg [form]="form" [list]="validations.age" [type]="'age'"/>
+  </div>
+  <button (click)="submit()">Send</button>
+</form>
