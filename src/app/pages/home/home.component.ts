@@ -6,7 +6,10 @@ import {
   ReactiveFormsModule,
   Validators
 } from "@angular/forms";
-import { ErrorMsgComponent } from "../../components/error-msg/error-msg.component";
+import {
+  ErrorMsgComponent,
+  IErrorMsg
+} from "../../components/error-msg/error-msg.component";
 import { InputComponent } from "../../components/input/input.component";
 import { validations } from "./validations";
 
@@ -24,7 +27,7 @@ import { validations } from "./validations";
 })
 export class HomeComponent {
   form!: FormGroup;
-  validations = validations;
+  validations: IErrorMsg = validations;
 
   constructor(private _fb: FormBuilder) {
     this.buildForm();
